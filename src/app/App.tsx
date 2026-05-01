@@ -412,9 +412,9 @@ export default function App() {
 
               <div className="space-y-4">
                 {[
-                  { name: '1st Semester - Section A', desc: 'Introduction to Economics & Statistics', link: 'https://drive.google.com/drive/folders/1FCQ5mj0k0T1iDP4WLaT3l7FwCCnHqT72' },
-                  { name: '1st Semester - Section B', desc: 'Introduction to Economics & Statistics', link: 'https://drive.google.com/drive/folders/1TikFHWWUM8_8QjYA2St8rAo3MpXIfNRY' },
-                  { name: '3rd Semester', desc: 'Intermediate Economic Theory', link: 'https://drive.google.com/drive/folders/1-729Gowt5KVHL1Wwcx17E-rPxDqZdfP7' }
+                  { name: '1st Semester - Section A', desc: 'Micro, Macro, Maths, Dev Planning, HET', link: 'https://drive.google.com/drive/folders/1FCQ5mj0k0T1iDP4WLaT3l7FwCCnHqT72' },
+                  { name: '1st Semester - Section B', desc: 'Same day Class Notes of Micro, Macro, Maths, Dev Planning, HET', link: 'https://drive.google.com/drive/folders/1TikFHWWUM8_8QjYA2St8rAo3MpXIfNRY' },
+                  { name: '3rd Semester', desc: 'Master Drive for all Econ', link: 'https://drive.google.com/drive/folders/1-729Gowt5KVHL1Wwcx17E-rPxDqZdfP7' }
                 ].map((resource, idx) => (
                   <a
                     key={idx}
