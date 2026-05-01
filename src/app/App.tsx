@@ -463,9 +463,9 @@ export default function App() {
 
               <div className="space-y-6">
                 {[
-                  { date: 'May 15, 2026', title: 'Guest Lecture: Economic Policy in Nepal', speaker: 'Dr. Ram Shrestha' },
-                  { date: 'May 20-22, 2026', title: 'Workshop: Data Analysis with R', speaker: 'ECOSS Research Team' },
-                  { date: 'June 5, 2026', title: 'Panel Discussion: Future of Economics', speaker: 'Industry Leaders' }
+                  { date: 'May TBA, 2026', title: 'Beginner Excel Workshop', speaker: 'Presenter Yet to Be Decided' },
+                  { date: 'May TBA, 2026', title: 'Advance Excel Workshop', speaker: 'Presenter Yet to Be Decided' },
+                  { date: 'May TBA, 2026', title: 'Pre-Budeget Discussion FY 2083/84', speaker: 'Multiple Budget Experts' }
                 ].map((event, idx) => (
                   <div key={idx} className="border-l-4 border-[#C5A059] pl-6 py-4">
                     <div className="flex items-center gap-2 mb-2">
@@ -561,9 +561,9 @@ export default function App() {
           {/* Leadership Row */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
             {[
-              { name: 'Sarishma Chaulagai', role: 'President' },
+              { name: 'Sarishma Chaulagain', role: 'President' },
               { name: 'Kapil Joshi', role: 'Vice President' },
-              { name: 'Prakriti Chaulagi', role: 'Secretary' },
+              { name: 'Prakriti Chaulagain', role: 'Secretary' },
               { name: 'Rijohn Shrestha', role: 'Joint Secretary' },
               { name: 'Durga Ghimire', role: 'Treasurer' }
             ].map((member, idx) => (
@@ -598,12 +598,12 @@ export default function App() {
           {/* Executive Members */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
             {[
-              'Piyush Bohara',
               'Beeja Bohara',
-              'Tek Prasad Regmi',
-              'Radha Kharel',
               'Dinesh Pant',
-              'Sandeep Bhandari'
+              'Piyush Bohara',
+              'Radha Kharel',
+              'Sandeep Bhandari',
+              'Tek Prasad Regmi'
             ].map((name, idx) => (
               <div key={idx} className="text-center">
                 <div className="mb-4 mx-auto bg-gradient-to-br from-[#8A1538] to-[#C5A059] flex items-center justify-center text-white aspect-square" style={{ width: 'clamp(100px, 100%, 140px)' }}>
