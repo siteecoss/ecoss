@@ -620,7 +620,9 @@ export default function App() {
                 {['Meeting Minutes #24', 'Meeting Minutes #23', 'Meeting Minutes #22'].map((doc, idx) => (
                   <a
                     key={idx}
-                    href="#"
+                    href="https://drive.google.com/file/d/1Wioiav06yqy0Xl8bbpnxDu8CH3H3iu2x/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-[#1a1a1a] hover:bg-[#8A1538] hover:text-white dark:hover:bg-[#8A1538] transition-all duration-300"
                     style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
                   >
