@@ -661,7 +661,7 @@ export default function App() {
           {/* Leadership Row */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
             {[
-              { name: 'Sarishma Chaulagain', role: 'President', img: sarishmaImg, linkedin: null },
+              { name: 'Sarishma Chaulagain', role: 'President', img: sarishmaImg, linkedin: 'https://www.linkedin.com/in/sarishma-chaulagain-3794a127b/' },
               { name: 'Kapil Joshi', role: 'Vice President', img: kapilImg, linkedin: 'https://www.linkedin.com/in/kapil-joshi-737959239/' },
               { name: 'Prakriti Chaulagain', role: 'Secretary', img: prakritiImg, linkedin: 'https://www.linkedin.com/in/prakritichaulagain/' },
               { name: 'Rijohn Shrestha', role: 'Joint Secretary', img: rijohnImg, linkedin: null },
