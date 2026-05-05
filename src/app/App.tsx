@@ -3,10 +3,24 @@ import { Sun, Moon, Menu, X, Calendar, FileText, Download, Mail, ArrowRight, Mes
 import ecosLogo from '../imports/ECOSS_logo.png';
 import tuAerial from '../imports/TU_aerial_shot.jpeg';
 import ecosTeam from '../imports/ECOSS_Team_image.jpg';
+import sarishmaImg from '../imports/Sarishma_Chaulagain.jpg';
+import kapilImg from '../imports/Kapil_Joshi.jpg';
+import prakritiImg from '../imports/Prakriti_Chaulagain.jpg';
+import rijohnImg from '../imports/Rijohn_Shrestha.jpg';
+import durgaImg from '../imports/Durga_Ghimire.jpg';
+import alkaImg from '../imports/Alka_Bista.jpg';
+import beejaImg from '../imports/Beeja_Bohara.jpg';
+import bishalImg from '../imports/Bishal_Ghimire.jpg';
+import dineshImg from '../imports/Dinesh_Panta.jpg';
+import piyushImg from '../imports/Piyush_Bohara.jpg';
+import radhaImg from '../imports/Radha_Kharel.jpg';
+import sandipImg from '../imports/Sandip_Bhandari.jpg';
+import tekImg from '../imports/Tek_Prasad_Regmi.jpg';
 
 export default function App() {
   const [isDark, setIsDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [noticeOpen, setNoticeOpen] = useState(true);
 
   useEffect(() => {
     // Set favicon
@@ -42,6 +56,92 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
+      {/* Notice Modal */}
+      {noticeOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+          style={{ backgroundColor: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(4px)' }}
+        >
+          <div
+            className="relative w-full max-w-md bg-white dark:bg-[#1a1a1a] shadow-2xl overflow-hidden"
+            style={{ borderRadius: '16px' }}
+          >
+            {/* Top accent bar */}
+            <div className="h-2 w-full" style={{ background: 'linear-gradient(90deg, #8A1538, #C5A059)' }} />
+
+            {/* Close button */}
+            <button
+              onClick={() => setNoticeOpen(false)}
+              aria-label="Close notice"
+              className="absolute top-4 right-4 flex items-center justify-center bg-gray-100 dark:bg-[#2a2a2a] hover:bg-gray-200 dark:hover:bg-[#333] transition-colors"
+              style={{ width: '44px', height: '44px', borderRadius: '50%' }}
+            >
+              <X className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+            </button>
+
+            <div className="px-8 pb-8 pt-6 flex flex-col items-center text-center gap-5">
+              {/* NOTICE label */}
+              <p
+                className="tracking-[0.2em] uppercase"
+                style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '0.75rem', color: 'var(--maroon)', letterSpacing: '0.2em' }}
+              >
+                Notice
+              </p>
+
+              {/* WhatsApp icon circle */}
+              <div
+                className="flex items-center justify-center"
+                style={{ width: '64px', height: '64px', borderRadius: '50%', background: '#25D366' }}
+              >
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+
+              {/* Title */}
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--maroon)', fontSize: '1.5rem', lineHeight: '1.3' }}>
+                Join the ECOSS Sports Committee
+              </h2>
+
+              {/* Body */}
+              <p className="text-gray-600 dark:text-gray-300" style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', lineHeight: '1.6' }}>
+                Stay updated with all sports events and activities. Join our official WhatsApp community below.
+              </p>
+
+              {/* CTA Button */}
+              <a
+                href="https://chat.whatsapp.com/GdsGFbE8pp2IKwqTOumPkM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full transition-opacity hover:opacity-90 active:opacity-80"
+                style={{
+                  background: '#25D366',
+                  color: '#fff',
+                  borderRadius: '16px',
+                  padding: '14px 24px',
+                  fontFamily: 'var(--font-heading)',
+                  fontWeight: 600,
+                  fontSize: '1rem',
+                  textDecoration: 'none',
+                  minHeight: '52px',
+                }}
+              >
+                <MessageCircle className="h-5 w-5 flex-shrink-0" />
+                Join WhatsApp Group
+              </a>
+
+              {/* Dismiss link */}
+              <button
+                onClick={() => setNoticeOpen(false)}
+                className="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors underline underline-offset-2"
+                style={{ fontFamily: 'var(--font-body)' }}
+              >
+                Maybe later
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md border-b border-border">
         <nav className="max-w-[1400px] mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
@@ -561,15 +661,29 @@ export default function App() {
           {/* Leadership Row */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-12">
             {[
-              { name: 'Sarishma Chaulagain', role: 'President' },
-              { name: 'Kapil Joshi', role: 'Vice President' },
-              { name: 'Prakriti Chaulagain', role: 'Secretary' },
-              { name: 'Rijohn Shrestha', role: 'Joint Secretary' },
-              { name: 'Durga Ghimire', role: 'Treasurer' }
+              { name: 'Sarishma Chaulagain', role: 'President', img: sarishmaImg, linkedin: null },
+              { name: 'Kapil Joshi', role: 'Vice President', img: kapilImg, linkedin: 'https://www.linkedin.com/in/kapil-joshi-737959239/' },
+              { name: 'Prakriti Chaulagain', role: 'Secretary', img: prakritiImg, linkedin: 'https://www.linkedin.com/in/prakritichaulagain/' },
+              { name: 'Rijohn Shrestha', role: 'Joint Secretary', img: rijohnImg, linkedin: null },
+              { name: 'Durga Ghimire', role: 'Treasurer', img: durgaImg, linkedin: null }
             ].map((member, idx) => (
               <div key={idx} className="text-center">
-                <div className="mb-6 mx-auto bg-gradient-to-br from-[#8A1538] to-[#C5A059] flex items-center justify-center text-white aspect-square" style={{ width: 'clamp(120px, 100%, 180px)' }}>
-                  <span className="text-6xl">👤</span>
+                <div className="mb-6 mx-auto overflow-hidden aspect-square" style={{ width: 'clamp(120px, 100%, 180px)', borderRadius: '16px' }}>
+                  {member.linkedin ? (
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="block w-full h-full" title={`${member.name} on LinkedIn`}>
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
                 <h3
                   className="mb-2 tracking-tight"
@@ -596,18 +710,29 @@ export default function App() {
           </div>
 
           {/* Executive Members */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
-              'Beeja Bohara',
-              'Dinesh Pant',
-              'Piyush Bohara',
-              'Radha Kharel',
-              'Sandeep Bhandari',
-              'Tek Prasad Regmi'
-            ].map((name, idx) => (
+              { name: 'Alka Bista', img: alkaImg, linkedin: 'https://www.linkedin.com/in/alka-bista-373808285/' },
+              { name: 'Beeja Bohara', img: beejaImg, linkedin: 'https://www.linkedin.com/in/beeja-bohara-7941072a1/' },
+              { name: 'Bishal Ghimire', img: bishalImg, linkedin: null },
+              { name: 'Dinesh Panta', img: dineshImg, linkedin: null },
+              { name: 'Piyush Bohara', img: piyushImg, linkedin: 'https://www.linkedin.com/in/piyush-bohara/' },
+              { name: 'Radha Kharel', img: radhaImg, linkedin: 'https://www.linkedin.com/in/radha-kharel-437584276/' },
+              { name: 'Sandeep Bhandari', img: sandipImg, linkedin: 'https://www.linkedin.com/in/sandeep-bhandari-b27731246/' },
+              { name: 'Tek Prasad Regmi', img: tekImg, linkedin: 'https://www.linkedin.com/in/tek-prasad-regmi-297b122a5/' }
+            ].map((member, idx) => (
               <div key={idx} className="text-center">
-                <div className="mb-4 mx-auto bg-gradient-to-br from-[#8A1538] to-[#C5A059] flex items-center justify-center text-white aspect-square" style={{ width: 'clamp(100px, 100%, 140px)' }}>
-                  <span className="text-4xl">👤</span>
+                <div
+                  className="mb-4 mx-auto aspect-square overflow-hidden"
+                  style={{ width: 'clamp(100px, 100%, 140px)', borderRadius: '16px' }}
+                >
+                  {member.linkedin ? (
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="block w-full h-full" title={`${member.name} on LinkedIn`}>
+                      <img src={member.img} alt={member.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+                    </a>
+                  ) : (
+                    <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                  )}
                 </div>
                 <h4
                   className="mb-1 tracking-tight"
@@ -617,7 +742,7 @@ export default function App() {
                     fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
                   }}
                 >
-                  {name}
+                  {member.name}
                 </h4>
                 <p
                   className="text-muted-foreground uppercase tracking-wide"
